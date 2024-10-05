@@ -126,6 +126,7 @@ def main():
             decimalToHexadecimal()
             pass
         else:
-            print("Sorry, this option does not exist!")
+            print("Thanks for using my calculator!!")
+            break
 
 main()
