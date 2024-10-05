@@ -70,6 +70,31 @@ def decimalToBinaryBase4():
     # Output the final binary base-4 number
     print(f"The base-4 binary equivalent of your decimal number is: {binary_base4}")
 
+def hexadecimalToDecimal():
+    print("working on it.......")
+
+
+
+
+def decimalToHexadecimal():
+    decimal = int(input("Please enter your decimal number: "))
+
+    # Edge case for 0
+    if decimal == 0:
+        print(f"The hexadecimal equivalent of decimal {decimal} is: 0")
+        return
+    
+    hexadecimal = ""
+
+    while decimal > 0:
+        remainder = decimal % 16  # Get the remainder when divided by 16
+        if remainder < 10:
+            hexadecimal = str(remainder) + hexadecimal  # For 0-9
+        else:
+            hexadecimal = chr(remainder - 10 + ord('A')) + hexadecimal  # For A-F
+        decimal = decimal // 16  # Update the decimal number by dividing it by 16
+    
+    print(f"The hexadecimal equivalent of the input decimal number is: {hexadecimal}")
 
 
 def main():
@@ -80,10 +105,11 @@ def main():
         print("2. Decimal to Binary(base-2)")
         print("3. Binary(base4) to Decimal")
         print("4. Decimal to Binary(base-4)")
-        print("5. ")
+        print("5. Hexadecimal to Decimal")
+        print("6. Decimal to Hexadecimal")
         print("0. Exit")
         print("_" * 35)
-        option = int(input("Choose an option (0-5): "))
+        option = int(input("Choose an option (0-6): "))
         print("\n")
 
         if option == 1:
@@ -94,6 +120,10 @@ def main():
             binaryBase4ToDecimal()
         elif option == 4:
             decimalToBinaryBase4()
+        elif option == 5:
+            hexadecimalToDecimal()
+        elif option == 6:
+            decimalToHexadecimal()
             pass
         else:
             print("Sorry, this option does not exist!")
