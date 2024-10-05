@@ -34,17 +34,14 @@ def decimalToBinaryBase2():
     print(f"The binary equivalent of decimal {decimal} is: {binary}")
 
 def binaryBase4ToDecimal():
-    binary_base4 = input("Please enter your base-4 binary number: ")
-    
+    binary_base4 = input("Please enter your base-4 binary number: ")  
     decimal = 0
     
-    # Loop through each digit of the base-4 binary number, starting from the rightmost side
     length = len(binary_base4)
     for i in range(length):
         # Convert the current character to an integer (base 4 digit)
         digit = int(binary_base4[length - 1 - i])  # Reverse index to go from right to left
         
-        # Check if the digit is valid (0, 1, 2, or 3)
         if digit not in [0, 1, 2, 3]:
             print("Invalid input: Base-4 digits must be 0, 1, 2, or 3.")
             return
