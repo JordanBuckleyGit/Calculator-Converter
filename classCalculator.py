@@ -1,5 +1,5 @@
-#hey this is a caclulator for conversions
-#created by Jordan Buckley
+# Hey this is a caclulator for conversions
+# Created by Jordan Buckley
 
 def binaryBase2ToDecimal():
     binary = input("Please enter your binary number: ")
