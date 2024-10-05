@@ -1,5 +1,5 @@
-#hey this is a caclulator for conversions
-#created by Jordan Buckley
+#Hey this is a caclulator for conversions
+#Created by Jordan Buckley
 
 def binaryBase2ToDecimal():
     binary = input("Please enter your binary number: ")
@@ -9,7 +9,7 @@ def binaryBase2ToDecimal():
     for i in range(length):
         digit = int(binary[length - 1 - i])  # Reverse index to go from right to left
         
-        # If the binary digit is 1, we calculate the contribution to the decimal value
+        # If the binary digit is 1, calculate the contribution to the decimal value
         if digit == 1:
             decimal += 2 ** i
     
