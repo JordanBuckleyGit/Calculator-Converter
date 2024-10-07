@@ -13,14 +13,14 @@ def binaryBase2ToDecimal():
         if digit == 1:
             decimal += 2 ** i
     
-    print(f"The decimal equivalent of binary {binary} is: {decimal}")
+    print(f"The decimal equivalent of binary {binary} is: {decimal}₁₀")
 
 def decimalToBinaryBase2():
     decimal = int(input("Please enter your decimal number: "))
     
     # Edge case for 0
     if decimal == 0:
-        print(f"The binary equivalent of decimal {decimal} is: 0")
+        print(f"The binary equivalent of decimal {decimal} is: 0₂")
         return
     
     # Initialize an empty string to store the binary result
@@ -31,7 +31,7 @@ def decimalToBinaryBase2():
         binary = str(remainder) + binary  # Prepend the remainder to the binary string
         decimal = decimal // 2  # Update the decimal number by dividing it by 2
     
-    print(f"The binary equivalent of decimal {decimal} is: {binary}")
+    print(f"The binary equivalent of decimal {decimal} is: {binary}₂")
 
 def binaryBase4ToDecimal():
     binary_base4 = input("Please enter your base-4 binary number: ")
@@ -50,14 +50,14 @@ def binaryBase4ToDecimal():
         # Calculate the decimal value of this digit at its position
         decimal += digit * (4 ** i)
     
-    print(f"The decimal equivalent of base-4 binary {binary_base4} is: {decimal}")
+    print(f"The decimal equivalent of base-4 binary {binary_base4} is: {decimal}₁₀")
 
 def decimalToBinaryBase4():
     decimal = int(input("Please enter your decimal number: "))
 
     # Edge case for 0
     if decimal == 0:
-        print(f"The binary equivalent of decimal {decimal} is: 0")
+        print(f"The binary equivalent of decimal {decimal} is: 0₄")
         return
     
     binary_base4= ""
@@ -68,7 +68,7 @@ def decimalToBinaryBase4():
         decimal = decimal // 4  # Update the decimal number by dividing it by 4
     
     # Output the final binary base-4 number
-    print(f"The base-4 binary equivalent of your decimal number is: {binary_base4}")
+    print(f"The base-4 binary equivalent of your decimal number is: {binary_base4}₄")
 
 def hexadecimalToDecimal():
     hexadecimal = input("Please enter your hexadecimal number: ")
@@ -92,12 +92,10 @@ def hexadecimalToDecimal():
             # Update the decimal result by adding value * 16^position
             decimal += value * (16 ** (length - i - 1))
 
-        print(f"The decimal equivalent of hexadecimal {hexadecimal} is {decimal}")
+        print(f"The decimal equivalent of hexadecimal {hexadecimal} is {decimal}₁₀")
 
     except ValueError:
-        print("Invalid hexadecimal number. Please try again.")    print("working on it.......")
-
-
+        print("Invalid hexadecimal number. Please try again.")
 
 
 def decimalToHexadecimal():
@@ -105,7 +103,7 @@ def decimalToHexadecimal():
 
     # Edge case for 0
     if decimal == 0:
-        print(f"The hexadecimal equivalent of decimal {decimal} is: 0")
+        print(f"The hexadecimal equivalent of decimal {decimal} is: 0₁₆")
         return
     
     hexadecimal = ""
@@ -118,7 +116,7 @@ def decimalToHexadecimal():
             hexadecimal = chr(remainder - 10 + ord('A')) + hexadecimal  # For A-F
         decimal = decimal // 16  # Update the decimal number by dividing it by 16
     
-    print(f"The hexadecimal equivalent of the input decimal number is: {hexadecimal}")
+    print(f"The hexadecimal equivalent of the input decimal number is: {hexadecimal}₁₆")
 
 
 def main():
