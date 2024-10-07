@@ -71,7 +71,31 @@ def decimalToBinaryBase4():
     print(f"The base-4 binary equivalent of your decimal number is: {binary_base4}")
 
 def hexadecimalToDecimal():
-    print("working on it.......")
+    hexadecimal = input("Please enter your hexadecimal number: ")
+
+    try:
+        decimal = 0
+
+        # Convert the input to uppercase to handle both lowercase and uppercase letters
+        hexadecimal = hexadecimal.upper()
+        length = len(hexadecimal)
+
+        # Traverse the hexadecimal string from left to right
+        for i in range(length):
+            char = hexadecimal[i]
+
+            if '0' <= char <= '9':
+                value = ord(char) - ord('0')  # '0' to '9' are between 48-57 in ASCII
+            elif 'A' <= char <= 'F':
+                value = ord(char) - ord('A') + 10  # 'A' to 'F' are between 65-70 in ASCII
+
+            # Update the decimal result by adding value * 16^position
+            decimal += value * (16 ** (length - i - 1))
+
+        print(f"The decimal equivalent of hexadecimal {hexadecimal} is {decimal}")
+
+    except ValueError:
+        print("Invalid hexadecimal number. Please try again.")    print("working on it.......")
 
 
 
