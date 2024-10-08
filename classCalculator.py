@@ -80,7 +80,6 @@ def hexadecimalToDecimal():
         hexadecimal = hexadecimal.upper()
         length = len(hexadecimal)
 
-        # Traverse the hexadecimal string from left to right
         for i in range(length):
             char = hexadecimal[i]
 
