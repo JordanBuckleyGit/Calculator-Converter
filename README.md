@@ -14,6 +14,12 @@ This calculator supports the following conversions:
 💡 Example Usage
 Run the script from your terminal:
 
-bash
+### bash
 Copy code
 python conversion_calculator.py
+
+## Contributors
+- [JordanBuckleyGit](https://github.com/JordanBuckleyGit)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
