@@ -11,3 +11,6 @@ Base-4 Binary to Decimal
 Decimal to Base-4 Binary
 Hexadecimal to Decimal
 Decimal to Hexadecimal
+
+Run from terminal with bash:
+python conversion_calculator.py
